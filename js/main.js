@@ -56,7 +56,7 @@ function run(){
 		wish.innerHTML="Happy Birthday";
 	}
 	else if(year>crtYear){
-		alert("This is next year compare to previous year");
+		alert("This is next year compare to this year");
 		usrDate.value="";
 	}
 }

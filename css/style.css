@@ -1,0 +1,17 @@
+body {
+	text-align: center;
+}
+.cal {
+	background: lightgray;
+	display: inline-block;
+	border: 1px solid black;
+}
+h3 {
+	margin: 10px;
+}
+.head {
+	display: none;
+}
+.hide {
+	display: none;
+}

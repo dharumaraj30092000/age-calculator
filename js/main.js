@@ -20,8 +20,7 @@ function run(){
 	let calDate=Math.abs(parseInt(crtDate)-parseInt(date));
 	let calMon=Math.abs(parseInt(crtMon)-parseInt(month));
 	let calYr=Math.abs(parseInt(crtYear)-parseInt(year));
-	console.log(calDate,calMon,calYr);
-    if(year!==crtYear){
+    if(year!==crtYear && year<crtYear){
 			showDate.style.display= "block";
 			showDateHead.style.display= "block";
 			showDate.value=calDate;
@@ -33,7 +32,7 @@ function run(){
 			showYear.value=calYr;
 	}
 	else{
-		if(month!==crtMon){
+		if(month!==crtMon && year===crtYear){
 			showDate.style.display="block";
 			showDateHead.style.display="block";
 			showDate.value=calDate;
@@ -46,7 +45,7 @@ function run(){
 			showDateHead.style.display="block";
 			showDate.value=calDate;
 		}
-		else{
+		else if(year===crtYear && month===crtMon && date===crtDate){
 			wish.innerHTML="Happy Birthday";
 		}
 	}
@@ -55,6 +54,10 @@ function run(){
 		showYrHead.style.display= "block";
 		showYear.value=calYr;
 		wish.innerHTML="Happy Birthday";
+	}
+	else if(year>crtYear){
+		alert("This is next year compare to previous year");
+		usrDate.value="";
 	}
 }
 
